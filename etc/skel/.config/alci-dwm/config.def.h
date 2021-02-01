@@ -94,11 +94,14 @@ static Key keys[] = {
 
 	/*EXTRA FOR ALCI*/
 	{ MODKEY, 											XK_r,			 spawn,          SHCMD ("systemctl reboot")},
+	{ MODKEY, 											XK_l,			 spawn,          SHCMD ("pkill dwm")},
 	{ MODKEY, 											XK_s,			 spawn,          SHCMD ("systemctl poweroff")},
 	{ MODKEY, 											XK_x,			 spawn,          SHCMD ("systemctl poweroff")},
 	{ MODKEY,             					XK_Return, spawn,          SHCMD ("xterm")},
 	{ MODKEY,             					XK_Escape, spawn,          SHCMD ("xkill")},
 	{ MODKEY,                       XK_t,      spawn,          SHCMD ("xterm")},
+	{ Mod1Mask|ControlMask,         XK_t,      spawn,          SHCMD ("xterm")},
+	{ Mod1Mask|ControlMask,         XK_Return, spawn,          SHCMD ("xterm")},
 	/*EXTRA FOR ALCI*/
 
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -111,7 +114,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+/*	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },*/
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
